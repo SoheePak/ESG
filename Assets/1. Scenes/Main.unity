@@ -573,6 +573,8 @@ GameObject:
   m_Component:
   - component: {fileID: 17644601}
   - component: {fileID: 17644600}
+  - component: {fileID: 17644603}
+  - component: {fileID: 17644602}
   m_Layer: 0
   m_Name: MainManager
   m_TagString: Untagged
@@ -607,6 +609,127 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &17644602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17644599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbeb96541c821d641b8a6aeaf1b3b5c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gamebuttons:
+  - {fileID: 2010149822}
+  - {fileID: 1318465739}
+  - {fileID: 779085882}
+  - {fileID: 1703302878}
+  images:
+  - {fileID: 339143795}
+  - {fileID: 670607212}
+  - {fileID: 308930231}
+  - {fileID: 1044273089}
+  noSelectUI: {fileID: 597920978}
+  updateUI: {fileID: 489659289}
+  selectsound: {fileID: 8300000, guid: 149060022e17adc45ba2c368d0f2c741, type: 3}
+--- !u!82 &17644603
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17644599}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 1a01299bf9e5c484f8c11f919f676542, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &20716596
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7379,7 +7502,6 @@ GameObject:
   - component: {fileID: 309216052}
   - component: {fileID: 309216051}
   - component: {fileID: 309216050}
-  - component: {fileID: 309216055}
   m_Layer: 5
   m_Name: Canvas (1)
   m_TagString: Untagged
@@ -7495,30 +7617,6 @@ RectTransform:
   m_AnchoredPosition: {x: 54.65, y: 3.38}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &309216055
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 309216049}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbeb96541c821d641b8a6aeaf1b3b5c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gamebuttons:
-  - {fileID: 2010149822}
-  - {fileID: 1318465739}
-  - {fileID: 779085882}
-  - {fileID: 1703302878}
-  images:
-  - {fileID: 339143795}
-  - {fileID: 670607212}
-  - {fileID: 308930231}
-  - {fileID: 1044273089}
-  noSelectUI: {fileID: 597920978}
-  updateUI: {fileID: 489659289}
 --- !u!1001 &309542040
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46184,8 +46282,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 309216055}
-        m_TargetAssemblyTypeName: SelectBtn, Assembly-CSharp
+      - m_Target: {fileID: 17644602}
+        m_TargetAssemblyTypeName: MainManager, Assembly-CSharp
         m_MethodName: SelectGame
         m_Mode: 1
         m_Arguments:
@@ -52142,77 +52240,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2094472853}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2096891197
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2096891199}
-  - component: {fileID: 2096891198}
-  m_Layer: 0
-  m_Name: CarSpawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2096891198
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2096891197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cab4687c7b74f2409097a25603a5e57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cars:
-  - {fileID: 100010, guid: b3f4ad6e44f81784ba0ebe95aadf2a7d, type: 3}
-  - {fileID: 100010, guid: de535534204e83f4e84497ac553192eb, type: 3}
-  - {fileID: 100010, guid: 3cfde9a41ff096140a1bfec6f262d0f0, type: 3}
-  - {fileID: 100010, guid: e1697ef5073defa458e40968ffff2b30, type: 3}
-  - {fileID: 100010, guid: d267fbb9e36c6e4458c9a8756d725a79, type: 3}
-  - {fileID: 100010, guid: 12dd350c4c7e7754b807b38a22b4d078, type: 3}
-  - {fileID: 100010, guid: 11a57a102cdb5e642899ceab079f1938, type: 3}
-  - {fileID: 100014, guid: b836817eff26a034bbd13884590ce648, type: 3}
-  - {fileID: 100014, guid: 025a3497fa872fe4ebfed7edb8eb310c, type: 3}
-  - {fileID: 100014, guid: a8a6e2e210e71bc4ab5ba85122928ac8, type: 3}
-  - {fileID: 100010, guid: fc2b2b65264c13f48a615fa7dbc2ef24, type: 3}
-  - {fileID: 100010, guid: b1969db97c2d8604ba4bfe3000a13858, type: 3}
-  - {fileID: 100010, guid: 675baac8bae68964e948aabc6ff2857c, type: 3}
-  - {fileID: 100010, guid: a7b60e70606f80245b2f8bc7ce2fadb6, type: 3}
-  - {fileID: 100010, guid: 1dabf884aa0716149a1bc775f0b620d8, type: 3}
-  - {fileID: 100010, guid: a7cd9ad30e9d4c146986aa1e6694b9e5, type: 3}
-  - {fileID: 100010, guid: f0ffa104f4ba20b40a0421d7c2b5f098, type: 3}
-  - {fileID: 100010, guid: fba5e236738a7c940b3a8d031c307794, type: 3}
-  - {fileID: 100014, guid: 636cb627739652c418fcc4f683a138b1, type: 3}
-  - {fileID: 100014, guid: f119644f5530c1044aa946bb6b18bb13, type: 3}
-  - {fileID: 100014, guid: 1508f459923b7df4889f466e17864ab4, type: 3}
-  pos:
-  - {fileID: 2125282657}
-  - {fileID: 1470623697}
-  - {fileID: 1273945726}
-  - {fileID: 1499308200}
---- !u!4 &2096891199
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2096891197}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 74.87577, y: -193.41228, z: -92.108}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2099828142
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53646,9 +53673,8 @@ SceneRoots:
   - {fileID: 705507995}
   - {fileID: 570707641}
   - {fileID: 1360342394}
-  - {fileID: 2033849136}
-  - {fileID: 2096891199}
   - {fileID: 245416278}
+  - {fileID: 2033849136}
   - {fileID: 2066834333}
   - {fileID: 309216054}
   - {fileID: 17644601}

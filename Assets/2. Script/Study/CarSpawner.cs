@@ -1,8 +1,10 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using Unity.XR.CoreUtils;
 using UnityEngine;
+using UnityEngine.Video;
 
 public class CarSpawner : MonoBehaviour
 {
@@ -10,35 +12,13 @@ public class CarSpawner : MonoBehaviour
     public Transform[] pos; // 차들를 생성할 위치 배열
     private float timer;
     private float spawntime = 2f;
-    private float rotationvalue=90f;
-
-    private AudioSource audioSource;
-    public AudioClip[] audioClips;
-
-    public GameObject nextscene_btn;
-    public GameObject canvers;
-    public GameObject video;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        audioSource = GetComponent<AudioSource>();
-        StartCoroutine("StartStudy");
-    }
-    IEnumerator StartStudy()
-    {
-        yield return new WaitForSeconds(2f);
-        canvers.SetActive(true);
-        audioSource.PlayOneShot(audioClips[0]);
-        yield return new WaitForSeconds(13f);
-        nextscene_btn.SetActive(true);
-    }
+    private float rotationvalue = 90f;
 
     // Update is called once per frame
     void Update()
     {
         timer += Time.deltaTime;
-        if(timer>= spawntime)
+        if (timer >= spawntime)
         {
             timer = 0;
             spawntime = Random.Range(0.5f, 1.5f);
@@ -46,11 +26,6 @@ public class CarSpawner : MonoBehaviour
         }
     }
 
-    public void OnClickbtn()
-    {
-        audioSource.mute = true; //배경음악끄기
-        
-    }
     public void CarSpawn()
     {
         int i =Random.Range(0, pos.Length); //랜덤 위치
