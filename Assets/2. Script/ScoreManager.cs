@@ -49,7 +49,7 @@ public class ScoreManager : MonoBehaviour
     public GameObject recordUI;
     public GameObject recordAsk;
 
-    public TMP_InputField askname;
+    public InputField askname;
     public Transform content; //스크롤뷰의 content
     public GameObject scoretextPrefab;
     public int score;
@@ -67,6 +67,7 @@ public class ScoreManager : MonoBehaviour
     }
     private void LoadScores()
     {
+        Debug.Log("랭킹 시스템 호출");
         int scoreCount = PlayerPrefs.GetInt("{gamekey}_ScoreCount", 0);
         scoreDatalist.Clear(); // 기존 데이터 초기화
 
@@ -150,6 +151,7 @@ public class ScoreManager : MonoBehaviour
             rankText.text = (i+1).ToString();
             nameText.text = scoreDatalist[i].playerName;
             ScoreText.text = scoreDatalist[i].score.ToString();
+            Debug.Log("등록");
         }
     }
     public void StarCount(int count)

@@ -49,11 +49,11 @@ public class Note : MonoBehaviour
         else
         {//분리수거 실패했다면
             StartCoroutine("DestroyObj");
-            TrashManager.instance.wrong++;
+            TrashManager.instance.WrongCount();
         }
         if (other.CompareTag("Fail")|| other.CompareTag("Floor"))
         {//놓침
-            TrashManager.instance.wrong++; 
+            TrashManager.instance.WrongCount();
             ismove = false; //놓치면 통 안에서 멈춤
             StartCoroutine("DestroyObj");
         }

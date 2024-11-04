@@ -31,7 +31,7 @@ public class OnScreenKeyboard : MonoBehaviour
     [SerializeField]
     private Button bgCloseBtn;
     [SerializeField]
-    private TMP_InputField showTextField;
+    private InputField showTextField;
     [SerializeField]
     private GameObject KrNormal,KrNormalCpas,EnNormal,EnNormalCpas;
     [SerializeField]

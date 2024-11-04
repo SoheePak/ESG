@@ -17,7 +17,7 @@ public class trashSpawner : MonoBehaviour
     }
     IEnumerator Timeout()
     { //  제한시간이 끝나면 게임 종료
-        yield return new WaitForSeconds(30f); 
+        yield return new WaitForSeconds(10f); 
         TrashManager.instance.EndGame();
     }
 
