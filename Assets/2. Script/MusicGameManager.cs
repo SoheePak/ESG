@@ -31,6 +31,14 @@ public class MusicGameManager : MonoBehaviour
     public GameObject restart_btn;
     public GameObject home_btn;
     public GameObject record_btn;
+    public GameObject[] Hand;
+    public GameObject[] tts;
+    public GameObject learn;
+    public GameObject[] earthbtn;
+
+    private AudioSource audioSource;
+    public AudioClip selectsound;
+    public AudioClip[] ttssound;
 
     private void Awake()
     {
@@ -39,11 +47,15 @@ public class MusicGameManager : MonoBehaviour
     private void Start()
     {
        endGameUI.SetActive(false);
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void GameStart()
     {
+        audioSource.PlayOneShot(selectsound);
         notesSpawner.SetActive(true);
+        Hand[0].SetActive(true);
+        Hand[1].SetActive(true);
     }
     public void GameEnd()
     {
@@ -59,12 +71,27 @@ public class MusicGameManager : MonoBehaviour
         //순위를 등록할 수 있는지 묻기
     }
     
-    public void OnClickRestart()
+    public void Learn()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        audioSource.PlayOneShot(selectsound);
+        StartCoroutine("Learn2");
     }
-    public void OnClickHome()
+    IEnumerator Learn2()
     {
-        //메인화면으로 돌아가기
+        yield return new WaitForSeconds(2f);
+        learn.SetActive(true);
+        audioSource.PlayOneShot(ttssound[0]);
+        yield return new WaitForSeconds(13f);
+        tts[0].SetActive(false);
+        tts[1].SetActive(true);
+        audioSource.PlayOneShot(ttssound[1]);
+        yield return new WaitForSeconds(17f);
+        tts[1].SetActive(false);
+        tts[2].SetActive(true);
+        audioSource.PlayOneShot(ttssound[2]);
+        yield return new WaitForSeconds(5f);
+        earthbtn[0].SetActive(true);
+        yield return new WaitForSeconds(25f);
+        earthbtn[1].SetActive(true);
     }
 }
